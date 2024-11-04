@@ -2,9 +2,9 @@
 
 const path = require('path')
 const fs = require('fs')
-const uuid = require('uuid/v4')
+const { v4: uuid } = require('uuid')
 const mkdirp = require('make-dir')
-const onExit = require('signal-exit')
+const { onExit } = require('signal-exit')
 const nodePreload = require('node-preload')
 
 if (!nodePreload.includes(__filename)) {
